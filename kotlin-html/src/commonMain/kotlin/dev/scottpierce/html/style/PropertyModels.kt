@@ -283,6 +283,16 @@ enum class Visibility(val value: String) {
     override fun toString(): String = value
 }
 
+enum class WordBreak(val value: String) {
+    NORMAL("normal"),
+    BREAK_ALL("break-all"),
+    KEEP_ALL("keep-all"),
+    BREAK_WORD("break-word"),
+    ;
+
+    override fun toString() = value
+}
+
 data class GridColumn internal constructor(
     val start: Int,
     val isStartSpan: Boolean,

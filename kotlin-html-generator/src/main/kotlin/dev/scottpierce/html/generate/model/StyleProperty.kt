@@ -75,6 +75,7 @@ enum class StyleProperty(
     TRANSITION_PROPERTY("transition-property", PropertyType.STRING),
     VISIBILITY("visibility", PropertyType.VISIBILITY),
     WIDTH("width", PropertyType.DIMENSION),
+    WORD_BREAK("word-break", PropertyType.WORD_BREAK),
     Z_INDEX("z-index", PropertyType.INT),
     ;
 
@@ -101,5 +102,6 @@ enum class PropertyType(val className: ClassName) {
     TEXT_ALIGN(ClassName("dev.scottpierce.html.style", "TextAlign")),
     TEXT_TRANSFORM(ClassName("dev.scottpierce.html.style", "TextTransform")),
     VISIBILITY(ClassName("dev.scottpierce.html.style", "Visibility")),
+    WORD_BREAK(ClassName("dev.scottpierce.html.style", "WordBreak"))
     ;
 }

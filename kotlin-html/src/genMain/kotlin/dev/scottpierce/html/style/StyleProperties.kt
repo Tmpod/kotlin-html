@@ -600,6 +600,15 @@ var StyleBuilder.width: Dimension?
         properties["width"] = value
     }
 
+val Style.wordBreak: WordBreak?
+    get() = properties["word-break"] as WordBreak?
+
+var StyleBuilder.wordBreak: WordBreak?
+    get() = properties["word-break"] as WordBreak?
+    set(value) {
+        properties["word-break"] = value
+    }
+
 val Style.zIndex: Int?
     get() = properties["z-index"] as Int?
 

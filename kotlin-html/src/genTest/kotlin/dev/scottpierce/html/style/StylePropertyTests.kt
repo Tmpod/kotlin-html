@@ -601,6 +601,15 @@ class StylePropertyTests {
     }
 
     @Test
+    fun wordBreak() {
+        val style = style {
+            wordBreak = WordBreak.BREAK_WORD
+            assertEquals(WordBreak.BREAK_WORD, wordBreak)
+        }
+        assertEquals(WordBreak.BREAK_WORD, style.wordBreak)
+    }
+
+    @Test
     fun zIndex() {
         val style = style {
             zIndex = 100

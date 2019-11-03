@@ -23,6 +23,8 @@ enum class DimensionUnit(private val value: String) {
     EX("ex"),
     PERCENT("%"),
     REM("rem"),
+    VH("vh"),
+    VW("vw"),
 
     // Absolute units
     INCH("in"),
@@ -50,6 +52,12 @@ val Int.percent: Dimension
 val Int.rem: Dimension
     get() = Dimension.Size(toFloat(), DimensionUnit.REM)
 
+val Int.vh: Dimension
+    get() = Dimension.Size(toFloat(), DimensionUnit.VH)
+
+val Int.vw: Dimension
+    get() = Dimension.Size(toFloat(), DimensionUnit.VW)
+
 val Float.px: Dimension
     get() = Dimension.Size(this, DimensionUnit.PX)
 
@@ -64,6 +72,12 @@ val Float.percent: Dimension
 
 val Float.rem: Dimension
     get() = Dimension.Size(this, DimensionUnit.REM)
+
+val Float.vh: Dimension
+    get() = Dimension.Size(this, DimensionUnit.VH)
+
+val Float.vw: Dimension
+    get() = Dimension.Size(this, DimensionUnit.VW)
 
 val Double.px: Dimension
     get() = Dimension.Size(toFloat(), DimensionUnit.PX)
